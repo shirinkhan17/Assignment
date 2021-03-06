@@ -62,6 +62,8 @@ python sensim.py
     --method   METHOD_NAME [cosine, manhattan, euclidean, inner,
                             ts-ss, angular, pairwise, pairwise-idf]
     --verbose  LOG_OPTION (bool)
+    
+python python sim_test_word2vec.py     
 ```
 
 ## References
