@@ -35,10 +35,23 @@ bash install.sh
 - To **test** your own sentences, you should fill out [**corpus.txt**](corpus.txt) with sentences as below:
 
 ```
-I ate an apple.
-I went to the Apple.
-I ate an orange.
-...
+I like to eat when I travel.
+I like walking when I travel.
+Trekking in the primary forest.
+watching bird. 
+I feel lonely in life.
+Flying kite.
+I like swimming in the sea.
+Playing football.
+I do cycle and biking. 
+Rock climbing.
+I love camping in the mountain.
+Skiing  snowboarding.
+I find it very difficult to get up in the morning.
+I spent much time in internet.
+I sleep when I stay home.
+Listening to music. 
+I have two mobiles.
 ```
 
 - Then, **choose** the **model** and **method** to be used to calculate the similarity between source and target sentences
@@ -50,73 +63,6 @@ python sensim.py
                             ts-ss, angular, pairwise, pairwise-idf]
     --verbose  LOG_OPTION (bool)
 ```
-
-<br/>
-
-## Examples
-- In this section, you can see the example result of `sentence-similarity`
-- As you know, there is a no **silver-bullet** which can calculate **_perfect similarity_** between sentences
-- You should conduct various experiments with your dataset
-    - _**Caution**_: `TS-SS score` might not fit with **sentence** similarity task, since this method originally devised to calculate the similarity between long documents
-- **Result**:
-
-Similairty:
-1. I like walking when I travel	
-
-I like to eat when I travel: 0.69121134 (S)
-I feel lonely in life: 0.12975985 (DIS)
-flying kite: 0.44844344 (S)
-Playing football: 0.38583282 (S)
-I do cycle and biking: 0.38583282 (S) 
-Rock climbing: 0.35936177 (S)
-I find it very difficult to get up in the morning: 0.14349224 (DIS)
-I spent much time in internet: 0.09431196 (DIS)
-
-
-<br/>
-2. Trekking in the primary forest
-
-I feel lonely in life: 0.09159722 (DIS)
-Playing football: 0.087622076 (DIS)
-I do cycle and biking: 0.3741088 (S)
-I love camping in the mountain: 0.35939074 (S)
-I find it very difficult to get up in the morning: 0.08324303 (DIS)
-I spent much time in internet: 0.036347397 (DIS)
-I sleep when I stay home: 0.04717419 (DIS)
-Listening to music: 0.014895751 (DIS)
-I have two mobiles: 0.03893737 (DIS)
-<br/>
-3. Watching bird 
-
-I like to eat when I travel: 0. 33489358 (S)
-I like walking when I travel: 0.36949763 (S)
-I feel lonely in life: 0.09789418 (DIS)
-flying kite: 0.40492806 (DIS)
-I like swimming in the sea: 0.3177985 (S)
-Playing football: 0.41372964 (S)
-I spent much time in internet: 0.09161192 (DIS)
-Listening to music: 0.38825262 (S)
-<br/>
-4. I feel lonely in life
-I like walking when I travel: 0.12975985 (S)
-Trekking in the primary forest: 0.09159722 (DIS)
-watching bird: 0.09789418 (DIS)
-I like swimming in the sea: 0.048059747 (DIS)
-I find it very difficult to get up in the morning: 0.13500313 (DIS)
-I spent much time in internet: 0.23604393 (DIS)
-I sleep when I stay home: 0.40517464 (S)
-<br/>
-5. I like swimming in the sea
-
-Flying kite: 0.39516008 (S)
-Playing football: 0.41546327 (S)
-I do cycle and biking: 0.30392492 (S)
-I find it very difficult to get up in the morning: 0.13998166 (DIS)
-I spent much time in internet: 0.05746212 (DIS)
-I sleep when I stay home: 0.1609051 (DIS)
-Listening to music: 0.14645165 (DIS)
-
-<br/>
 
 ## References
 ### Papers
@@ -136,6 +82,3 @@ Listening to music: 0.14645165 (DIS)
 - [BERTScore](https://github.com/Tiiiger/bert_score)
 - [Vector Similarity](https://github.com/taki0112/Vector_Similarity)
 
-<br/>
-
-### Articles
